@@ -1,0 +1,274 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+$border: rgba(225, 227, 223, 1);
+$logo-color: rgba(236, 99, 51, 1);
+$search-button: rgba(90, 169, 194, 1);
+$search-text: rgba(255, 255, 255, 1);
+$highlight-background: rgba(255, 255, 255, 1);
+$body-background: rgba(245, 245, 241, 1);
+$max-width: 990px;
+
+// Max Width for body is 990px
+
+//------------------Global Styling----------------//
+
+body {
+  background-color: $body-background;
+  font-size: 62.5%;
+}
+
+input:focus {
+  border: 1px solid $search-button;
+  box-shadow: 0;
+}
+
+
+//---------------Header------------------//
+
+.header-bar {
+  background-color: $highlight-background;
+  padding: 20px 0;
+}
+
+.header-nav {
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  background-color: $highlight-background;
+  padding: 15px 0;
+}
+
+.header-bar-container,
+.site-navs {
+  @include outer-container();
+  position: relative;
+}
+
+.logo,
+.search-bar {
+  display: inline-block;
+  float: left;
+}
+
+.logo {
+  color: $logo-color;
+  font-family: "Gentium Book Basic", serif;
+  font-size: em(40px);
+}
+
+.text-search-bar,
+.search-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: em(45px);
+}
+
+.text-search-bar {
+  left: 80px;
+  border: 1px solid $border;
+  border-radius: 3px 0 0 3px;
+  background-color: $body-background;
+  width: em(300px);
+}
+
+.search-button {
+  left: 250px;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: $search-button;
+  color: $search-text;
+}
+
+.site-options {
+  display: inline-block;
+  float: right;
+}
+
+.site-option {
+  display: inline-block;
+}
+
+.site-nav {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+//-------------------Main Body-----------------//
+.body-container {
+  @include outer-container();
+  padding: 30px 0;
+}
+
+//-------------------Sidebar------------------//
+
+.sidebar {
+  @include span-columns(3);
+}
+
+.sidebar-header {
+  margin-bottom: 10px;
+}
+
+.sidebar-div {
+  @include span-columns(3 of 3);
+  margin-bottom: 20px;
+  border: 1px solid $border;
+  background-color: $highlight-background;
+  padding: 10px;
+  line-height: 25px;
+}
+
+.categories {
+  margin-left: 10px;
+}
+
+.itemtypes {
+  border-bottom: 1px solid $border;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.itemtype > * {
+  display: inline-block;
+}
+
+.price-text {
+  @include fill-parent();
+}
+
+.price-range-container {
+  @include clearfix;
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $border;
+  padding-bottom: 20px;
+
+  > * {
+    float: left;
+  }
+
+  p {
+    margin: 5px 10px 0 10px;
+  }
+}
+
+.price-box {
+  @include size(em(60px) em(40px));
+  line-height: em(40px);
+  border: 1px solid $border;
+  border-radius: 3px;
+  padding-left: 5px;
+
+  .price-box-input {
+    float: right;
+    width: em(35px);
+    margin-top: 5px;
+    border: 0;
+    font-size: 1.2em;
+  }
+}
+
+
+
+.go-button {
+  @include size(em(58px) em(58px));
+  margin-left: 5px;
+  border: 1px solid $border;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.colors {
+  margin: 5px 0 10px;
+  border-bottom: 1px solid $border;
+  padding-bottom: 20px;
+
+  .color {
+    @include size(20px 20px);
+    display: inline-block;
+    border: 1px solid $border;
+    border-radius: 3px;
+  }
+}
+
+.ordering-options {
+  margin-bottom: 10px;
+  border-bottom: 1px solid $border;
+  padding-bottom: 20px;
+}
+
+.ordering-option {
+
+  * {
+    display: inline-block;
+  }
+
+  input {
+    @include size(15px 15px);
+  }
+
+}
+
+.shop-locations {
+  margin-bottom: 10px;
+  border-bottom: 1px solid $border;
+  padding-bottom: 20px;
+}
+
+.shop-location {
+
+  * {
+    display: inline-block;
+  }
+}
+
+//------------------Results Section---------------//
+
+.results-grid {
+  @include span-columns(9);
+  @include omega;
+}
+
+.results {
+  @include fill-parent();
+}
+
+.list-result {
+  @include span-columns(3 of 9);
+  margin-bottom: 20px;
+  border: 1px solid $border;
+  border-radius: 3px;
+  background-color: $highlight-background;
+  overflow: hidden;
+
+  &:nth-child(3n) {
+    @include omega;
+  }
+}
+
+.result-image {
+  @include fill-parent;
+  background: center center no-repeat;
+  background-size: 120%;
+  height: 200px;
+}
+
+.info-container {
+  @include clearfix;
+  padding: 5px;
+}
+
+.title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.creator {
+  float: left;
+}
+
+.price {
+  float: right;
+}

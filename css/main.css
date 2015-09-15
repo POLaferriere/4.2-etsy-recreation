@@ -1,0 +1,245 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  background-color: #f5f5f1;
+  font-size: 62.5%; }
+
+input:focus {
+  border: 1px solid #5aa9c2;
+  box-shadow: 0; }
+
+.header-bar {
+  background-color: white;
+  padding: 20px 0; }
+
+.header-nav {
+  border-top: 1px solid #e1e3df;
+  border-bottom: 1px solid #e1e3df;
+  background-color: white;
+  padding: 15px 0; }
+
+.header-bar-container,
+.site-navs {
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+  .header-bar-container::after,
+  .site-navs::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.logo,
+.search-bar {
+  display: inline-block;
+  float: left; }
+
+.logo {
+  color: #ec6333;
+  font-family: "Gentium Book Basic", serif;
+  font-size: 2.5em; }
+
+.text-search-bar,
+.search-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2.8125em; }
+
+.text-search-bar {
+  left: 80px;
+  border: 1px solid #e1e3df;
+  border-radius: 3px 0 0 3px;
+  background-color: #f5f5f1;
+  width: 18.75em; }
+
+.search-button {
+  left: 250px;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: #5aa9c2;
+  color: white; }
+
+.site-options {
+  display: inline-block;
+  float: right; }
+
+.site-option {
+  display: inline-block; }
+
+.site-nav {
+  display: inline-block;
+  margin-right: 15px; }
+
+.body-container {
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 0; }
+  .body-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.sidebar {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .sidebar:last-child {
+    margin-right: 0; }
+
+.sidebar-header {
+  margin-bottom: 10px; }
+
+.sidebar-div {
+  float: left;
+  display: block;
+  margin-right: 10.1484%;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #e1e3df;
+  background-color: white;
+  padding: 10px;
+  line-height: 25px; }
+  .sidebar-div:last-child {
+    margin-right: 0; }
+
+.categories {
+  margin-left: 10px; }
+
+.itemtypes {
+  border-bottom: 1px solid #e1e3df;
+  padding-bottom: 20px;
+  margin-bottom: 10px; }
+
+.itemtype > * {
+  display: inline-block; }
+
+.price-text {
+  width: 100%; }
+
+.price-range-container {
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e1e3df;
+  padding-bottom: 20px; }
+  .price-range-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .price-range-container > * {
+    float: left; }
+  .price-range-container p {
+    margin: 5px 10px 0 10px; }
+
+.price-box {
+  height: 2.5em;
+  width: 3.75em;
+  line-height: 2.5em;
+  border: 1px solid #e1e3df;
+  border-radius: 3px;
+  padding-left: 5px; }
+  .price-box .price-box-input {
+    float: right;
+    width: 2.1875em;
+    margin-top: 5px;
+    border: 0;
+    font-size: 1.2em; }
+
+.go-button {
+  height: 3.625em;
+  width: 3.625em;
+  margin-left: 5px;
+  border: 1px solid #e1e3df;
+  border-radius: 3px;
+  background-color: transparent; }
+
+.colors {
+  margin: 5px 0 10px;
+  border-bottom: 1px solid #e1e3df;
+  padding-bottom: 20px; }
+  .colors .color {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border: 1px solid #e1e3df;
+    border-radius: 3px; }
+
+.ordering-options {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e1e3df;
+  padding-bottom: 20px; }
+
+.ordering-option * {
+  display: inline-block; }
+
+.ordering-option input {
+  height: 15px;
+  width: 15px; }
+
+.shop-locations {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e1e3df;
+  padding-bottom: 20px; }
+
+.shop-location * {
+  display: inline-block; }
+
+.results-grid {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-right: 0; }
+  .results-grid:last-child {
+    margin-right: 0; }
+
+.results {
+  width: 100%; }
+
+.list-result {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 31.22104%;
+  margin-bottom: 20px;
+  border: 1px solid #e1e3df;
+  border-radius: 3px;
+  background-color: white;
+  overflow: hidden; }
+  .list-result:last-child {
+    margin-right: 0; }
+  .list-result:nth-child(3n) {
+    margin-right: 0; }
+
+.result-image {
+  width: 100%;
+  background: center center no-repeat;
+  background-size: 120%;
+  height: 200px; }
+
+.info-container {
+  padding: 5px; }
+  .info-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.creator {
+  float: left; }
+
+.price {
+  float: right; }

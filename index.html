@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-bar">
+      <div class="header-bar-container">
+        <h1 class="logo">Etsy</h1>
+        <div class="search-bar">
+          <input class="text-search-bar" type="text">
+          <button class="search-button">Search</button>
+        </div>
+        <ul class="site-options">
+          <li class="site-option">Sell on Etsy</li>
+          <li class="site-option">Register</li>
+          <li class="site-option">Sign in</li>
+          <li class="site-option">Cart</li>
+        </ul>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <ul class="site-navs">
+        <li class="site-nav">Clothing &amp; Accesories</li>
+        <li class="site-nav">Jewelry</li>
+        <li class="site-nav">Craft Supplies &amp; Tools</li>
+        <li class="site-nav">Weddings</li>
+        <li class="site-nav">Entertainment</li>
+        <li class="site-nav">Home &amp; Living</li>
+        <li class="site-nav">Kids &amp; Baby</li>
+        <li class="site-nav">Vintage</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="body-container">
+    <div class="sidebar">
+      <h3 class="show-results sidebar-header">Show results for&#58;</h3>
+      <div class="all-categories sidebar-div">
+        <h3 class="all-categories-text">All Categories</h3>
+        <ul class="categories">
+          <li class="category">Home & Living</li>
+          <li class="category">Art & Collectibles</li>
+          <li class="category">Weddings</li>
+          <li class="category">Clothing</li>
+          <li class="category">Paper & Party Supplies</li>
+          <li class="category">Jewelry</li>
+          <li class="category">Accessories</li>
+          <li class="category">Craft Supplies & Tools</li>
+          <li class="category">Bags & Purses</li>
+          <li class="category">Bath & Beauty</li>
+          <li class="category">Shoes</li>
+          <li class="category">Books, Movies & Music</li>
+          <li class="category">Electronics & Accesories</li>
+          <li class="category">Toys & Games</li>
+          <li class="category">Pet Supplies</li>
+        </ul>
+      </div>
+      <h3 class="refine sidebar-header">Refine your search</h3>
+      <div class="refine-search sidebar-div">
+        <h3 class="item-type">Item Type</h3>
+        <ul class="itemtypes">
+          <li class="itemtype">
+            <input type="radio">
+            <p>All Items</p>
+          </li>
+          <li class="itemtype">
+            <input type="radio">
+            <p>Handmade</p>
+          </li>
+          <li class="itemtype">
+            <input type="radio">
+            <p>Vintage</p>
+          </li>
+        </ul>
+        <h3 class="price-text">Price</h3>
+        <div class="price-range-container">
+          <div class="price-box">$
+            <input class="price-box-input" type="text">
+          </div>
+          <p>to</p>
+          <div class="price-box">$
+            <input class="price-box-input" type="text">
+          </div>
+          <button class="go-button"></button>
+        </div>
+        <h3 class="filter-by-color">Filter by Color</h3>
+        <ul class="colors">
+          <li class="color" style="background-color:rgba(223, 63, 70, 1)"></li>
+          <li class="color" style="background-color:rgba(239, 134, 51, 1)"></li>
+          <li class="color" style="background-color:rgba(239, 200, 51, 1)"></li>
+          <li class="color" style="background-color:rgba(96, 184, 8, 1)"></li>
+          <li class="color" style="background-color:rgba(90, 202, 239, 1)"></li>
+          <li class="color" style="background-color:rgba(145, 80, 241, 1)"></li>
+          <li class="color" style="background-color:rgba(0, 0, 0, 1)"></li>
+          <li class="color" style="background-color:rgba(255, 255, 255, 1)"></li>
+        </ul>
+        <h3 class="ordering">Ordering Options</h3>
+        <ul class="ordering-options">
+          <li class="ordering-option">
+            <input type="checkbox">
+            <p>Accepts Etsy Gift Cards</p>
+          </li>
+          <li class="ordering-option">
+            <input type="checkbox">
+            <p>Customizable</p>
+          </li>
+        </ul>
+        <h3 class="shop-loc">Shop Location</h3>
+        <ul class="shop-locations">
+          <li class="shop-location">
+            <input type="radio">
+            <p>Anywhere</p>
+          </li>
+          <li class="shop-location">
+            <input type="radio">
+            <p>United States</p>
+          </li>
+        </ul>
+        <h3 class="ship-to">Ship To</h3>
+        <select class="dropdown">
+          <option value="">Choose country</option>
+          <option value="1">United States</option>
+          <option value="2">Canada</option>
+          <option value="3">Mexico</option>
+          <option value="4">Great Britain</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="results-grid">
+      <ul class="results">
+      </ul>
+    </div>
+  </div>
+
+  <footer></footer>
+
+  <script id="result-template" type="text/x-handlebars-template">
+    <li class="result list-result">
+      <div class="result-image" style="background-image:url({{Images.[0].url_170x135}})"></div>
+      <div class="info-container">
+        <h4 class="title">{{title}}</h4>
+        <h6 class="creator">{{Shop.shop_name}}</h6>
+        <h5 class="price">${{price}}</h5>
+      </div>
+    </li>
+  </script>
+
+  <script src="bower_components/handlebars/handlebars.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
