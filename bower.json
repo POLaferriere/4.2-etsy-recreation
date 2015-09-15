@@ -1,0 +1,21 @@
+{
+  "name": "4.2-etsy-recreation",
+  "version": "0.0.0",
+  "authors": [
+    "Pierre Laferriere <polaferriere@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.4",
+    "handlebars": "~4.0.2",
+    "neat": "~1.7.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "3.3-color-clock",
+  "version": "1.0.0",
+  "description": "Color clock",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/*.scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/POLaferriere/3.3-color-clock.git"
+  },
+  "author": "PO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/POLaferriere/3.3-color-clock/issues"
+  },
+  "homepage": "https://github.com/POLaferriere/3.3-color-clock#readme"
+}
