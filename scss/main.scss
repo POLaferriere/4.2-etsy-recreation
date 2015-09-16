@@ -325,6 +325,33 @@ a {
   padding: 5px;
 }
 
+.categories-sort-container {
+  @include clearfix;
+  margin-bottom: 10px;
+}
+
+.results-categories {
+  float: left;
+  color: $text-header;
+
+  a {
+    color: $text-color;
+  }
+}
+
+.sort {
+  float: right;
+  color: $text-header;
+
+  span {
+    color: $text-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 .title {
   margin-bottom: 10px;
   overflow: hidden;

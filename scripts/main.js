@@ -39,6 +39,10 @@ fetchJSONP(videoGameURL, function(response) {
   itemResults.forEach(displayResult);
 });
 
+fetchJSONP(videoGameURL, function (response){
+  document.querySelector(".results-count").textContent = String(response.count) + ' Results';
+});
+
 function displayResult(result) {
   var source = document.querySelector('#result-template').innerHTML;
 

@@ -283,6 +283,27 @@ a {
     content: "";
     display: table; }
 
+.categories-sort-container {
+  margin-bottom: 10px; }
+  .categories-sort-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.results-categories {
+  float: left;
+  color: black; }
+  .results-categories a {
+    color: #3d91b2; }
+
+.sort {
+  float: right;
+  color: black; }
+  .sort span {
+    color: #3d91b2; }
+    .sort span:hover {
+      cursor: pointer; }
+
 .title {
   margin-bottom: 10px;
   overflow: hidden;
