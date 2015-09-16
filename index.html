@@ -232,10 +232,15 @@
 
   <script id="result-template" type="text/x-handlebars-template">
     <li class="result list-result">
-      <div class="result-image" style="background-image:url({{Images.[0].url_170x135}})"></div>
+      <a href="{{url}}">
+        <div class="result-image" style="background-image:url({{Images.[0].url_170x135}})" title="{{title}}">
+          <div class="heart-button"><i class="fa fa-heart"></i></div>
+          <div class="menu-button"><i class="fa fa-bars"></i></div>
+        </div>
+      </a>
       <div class="info-container">
-        <h4 class="title">{{title}}</h4>
-        <h6 class="creator">{{Shop.shop_name}}</h6>
+        <a href="{{url}}"><h4 class="title" title="{{title}}">{{title}}</h4></a>
+        <a href="#"><h6 class="creator">{{Shop.shop_name}}</h6></a>
         <h5 class="price">${{price}}</h5>
       </div>
     </li>

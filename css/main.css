@@ -16,6 +16,9 @@ input:focus {
   border: 1px solid #5aa9c2;
   box-shadow: 0; }
 
+a {
+  text-decoration: none; }
+
 .header-bar {
   background-color: white;
   padding: 20px 0; }
@@ -224,12 +227,54 @@ input:focus {
     margin-right: 0; }
   .list-result:nth-child(3n) {
     margin-right: 0; }
+  .list-result:hover .heart-button,
+  .list-result:hover .menu-button {
+    transition: all 0.5s ease-in;
+    visibility: visible;
+    opacity: 1; }
 
 .result-image {
   width: 100%;
+  position: relative;
   background: center center no-repeat;
   background-size: 120%;
   height: 200px; }
+
+.heart-button {
+  height: 1.875em;
+  width: 1.875em;
+  position: absolute;
+  top: 5px;
+  right: 60px;
+  transition: all 0.5s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 3px;
+  background-color: white;
+  text-align: center;
+  line-height: 2em;
+  color: #b2b2b2;
+  font-size: 1.875em; }
+  .heart-button:hover {
+    color: #a09a97; }
+
+.menu-button {
+  height: 1.875em;
+  width: 1.875em;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 3px;
+  background-color: white;
+  text-align: center;
+  line-height: 2em;
+  color: #b2b2b2;
+  font-size: 1.875em; }
+  .menu-button:hover {
+    color: #a09a97; }
 
 .info-container {
   padding: 5px; }
@@ -249,6 +294,8 @@ input:focus {
 .creator {
   float: left;
   color: #b2b2b2; }
+  .creator:hover {
+    text-decoration: underline; }
 
 .price {
   float: right;
@@ -314,7 +361,10 @@ input:focus {
   padding: 5px 10px;
   color: white; }
 
-.fa {
+.fa-facebook,
+.fa-twitter,
+.fa-pinterest,
+.fa-instagram {
   width: 15px; }
 
 .settings-container,

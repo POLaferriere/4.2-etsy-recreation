@@ -12,6 +12,7 @@ $highlight-background: rgba(255, 255, 255, 1);
 $body-background: rgba(245, 245, 241, 1);
 $text-header: rgba(0, 0, 0, 1);
 $artist: rgba(178, 178, 178, 1);
+$darker-artist: rgba(160, 154, 151, 1);
 $price: rgba(141, 184, 68, 1);
 $max-width: 990px;
 
@@ -29,6 +30,10 @@ body {
 input:focus {
   border: 1px solid $search-button;
   box-shadow: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -258,13 +263,61 @@ input:focus {
   &:nth-child(3n) {
     @include omega;
   }
+
+  &:hover .heart-button,
+  &:hover .menu-button {
+    transition: all .5s ease-in;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .result-image {
   @include fill-parent;
+  position: relative;
   background: center center no-repeat;
   background-size: 120%;
   height: 200px;
+}
+
+.heart-button {
+  @include size(em(30px) em(30px));
+  position: absolute;
+  top: 5px;
+  right: 60px;
+  transition: all .5s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 3px;
+  background-color: $highlight-background;
+  text-align: center;
+  line-height: 2em;
+  color: $artist;
+  font-size: em(30px);
+
+  &:hover {
+    color: $darker-artist;
+  }
+}
+
+.menu-button {
+  @include size(em(30px) em(30px));
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  transition: all .5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 3px;
+  background-color: $highlight-background;
+  text-align: center;
+  line-height: 2em;
+  color: $artist;
+  font-size: em(30px);
+
+  &:hover {
+    color: $darker-artist;
+  }
 }
 
 .info-container {
@@ -284,6 +337,10 @@ input:focus {
 .creator {
   float: left;
   color: $artist;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .price {
@@ -357,7 +414,10 @@ input:focus {
   color: $search-text;
 }
 
-.fa {
+.fa-facebook,
+.fa-twitter,
+.fa-pinterest,
+.fa-instagram {
   width: 15px;
 }
 
